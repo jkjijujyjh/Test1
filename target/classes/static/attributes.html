@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+</head>
+<!--/*@thymesVar id="th_background" type="ch"*/-->
+<body th:background="${th_background}" background="#D0D0D0">
+<!-- text 标签-->
+<!--/*@thymesVar id="title" type="ch"*/-->
+<h1 th:text="${title}">html标签演示</h1>
+<div>
+    <h5>id、name、value标签:</h5>
+    <!-- id、name、value标签-->
+    <!--/*@thymesVar id="th_id" type="ch"*/-->
+    <!--/*@thymesVar id="th_name" type="ch"*/-->
+    <!--/*@thymesVar id="th_value" type="ch"*/-->
+    <input
+            id="input1"
+            name="input1"
+            value="1"
+            th:id="${th_id}"
+            th:name="${th_name}"
+            th:value="${th_value}"
+    />
+</div>
+<br />
+<!--/*@thymesVar id="th_class" type="ch"*/-->
+<div class="div1" th:class="${th_class}">
+    <h5>class、href标签:</h5>
+    <!-- class、href标签-->
+    <!--/*@thymesVar id="th_href" type="ch"*/-->
+    <a th:href="${th_href}" href="##/">链接地址</a>
+</div>
+</body>
+</html>
